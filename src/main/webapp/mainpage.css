@@ -1,0 +1,105 @@
+/* 기본 스타일 설정 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f4e1; /* 밝은 크림색 배경 */
+}
+
+/* 전체 레이아웃을 flexbox로 설정 */
+.container {
+    display: flex;
+    flex-direction: column; /* 세로로 배치 (header가 위에, main이 그 아래) */
+    min-height: 100vh; /* 화면을 꽉 채우도록 */
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #e74c3c; /* 빨간색 배경 */
+    color: white;
+    width: 100%; /* 전체 너비를 100%로 설정 */
+    padding: 15px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #f39c12; /* 노란색 */
+}
+
+/* 메인 콘텐츠 스타일 */
+main {
+    background-image: url('images/pizzabackground.jpg'); /* 배경 이미지 */
+    background-size: contain;  /* 이미지가 넘치지 않도록 */
+    background-position: center; /* 이미지 위치 중앙 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    width: 100%; /* 전체 너비를 차지 */
+    height: 500px; /* 배경 이미지 높이 설정 */
+    position: relative;
+}
+
+
+/* 메뉴 섹션 스타일 */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 36px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 버튼 스타일 (피자 주문하기 버튼) */
+button {
+    background-color: #f39c12; /* 노란색 */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e67e22; /* 어두운 주황색 */
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #e74c3c; /* 빨간색 */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 16px;
+}
