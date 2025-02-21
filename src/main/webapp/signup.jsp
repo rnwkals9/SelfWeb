@@ -13,23 +13,36 @@
             <h1>회원가입</h1>
             <nav>
                 <ul>
-                    <li><a href="/signup">회원가입</a></li>
-                    <li><a href="/login">로그인</a></li>
-                    <li><a href="/menu">메뉴보기</a></li>
-                    <li><a href="/order">주문하기</a></li>
-                    <li><a href="/store">가까운 매장 찾기</a></li>
+                    <li><a href="signup.jsp">회원가입</a></li>
+                    <li><a href="login.jsp">로그인</a></li>
+                    <li><a href="menu.jsp">메뉴보기</a></li>
+                    <li><a href="order.jsp">주문하기</a></li>
+                    <li><a href="Userinfo.jsp">내 정보</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
             <h2>회원가입 폼</h2>
-            <form action="/signup" method="post">
-                <label for="username">사용자 이름:</label>
-                <input type="text" id="username" name="username" required><br><br>
+            <form action="signupProcess.jsp" method="post">
+                <label for="username">아이디:</label>
+                <input type="text" id="username" name="id" required><br><br>
 
                 <label for="password">비밀번호:</label>
                 <input type="password" id="password" name="password" required><br><br>
+
+                <label for="name">이름:</label>
+                <input type="text" id="name" name="uname" required><br><br>
+
+                <label for="sex">성별:</label>
+                <select id="sex" name="sex" required>
+                    <option value="">성별 선택</option>
+                    <option value="M">남자</option>
+                    <option value="F">여자</option>
+                </select><br><br>
+
+                <label for="phonenum">전화번호:</label>
+                <input type="tel" id="phonenum" name="phonenum" required placeholder="010-1234-5678"><br><br>
 
                 <button type="submit">가입하기</button>
             </form>

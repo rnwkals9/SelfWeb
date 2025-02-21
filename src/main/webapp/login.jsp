@@ -13,23 +13,23 @@
             <h1>로그인</h1>
             <nav>
                 <ul>
-                    <li><a href="/signup">회원가입</a></li>
-                    <li><a href="/login">로그인</a></li>
-                    <li><a href="/menu">메뉴보기</a></li>
-                    <li><a href="/order">주문하기</a></li>
-                    <li><a href="/store">가까운 매장 찾기</a></li>
+                    <li><a href="signup.jsp">회원가입</a></li>
+                    <li><a href="login.jsp">로그인</a></li>
+                    <li><a href="menu.jsp">메뉴보기</a></li>
+                    <li><a href="order.jsp">주문하기</a></li>
+                    <li><a href="Userinfo.jsp">내 정보</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <h2>로그인 폼</h2>
-            <form action="/login" method="post">
-                <label for="username">사용자 이름:</label>
-                <input type="text" id="username" name="username" required><br><br>
+            <h2>로그인</h2>
+            <form action="loginProcess.jsp" method="post">
+                <label for=userid>아이디:</label>
+                <input type="text" id="userid" name="id" required><br><br>
 
                 <label for="password">비밀번호:</label>
-                <input type="password" id="password" name="password" required><br><br>
+                <input type="password" id="password" name="pass" required><br><br>
 
                 <button type="submit">로그인</button>
             </form>

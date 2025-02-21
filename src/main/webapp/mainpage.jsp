@@ -1,4 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.nio.charset.StandardCharsets" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,11 +19,11 @@
             피자집에 오신 것을 환영합니다!
             <nav>
                 <ul>
-                    <li><a href="/signup">회원가입</a></li>
-                    <li><a href="/login">로그인</a></li>
-                    <li><a href="/menu">메뉴보기</a></li>
-                    <li><a href="/order">주문하기</a></li>
-                    <li><a href="/store">가까운 매장 찾기</a></li>
+                    <li><a href="signup.jsp">회원가입</a></li>
+                    <li><a href="login.jsp">로그인</a></li>
+                    <li><a href="menu.jsp">메뉴보기</a></li>
+                    <li><a href="order.jsp">주문하기</a></li>
+                    <li><a href="Userinfo.jsp">내 정보</a></li>
                 </ul>
             </nav>
         </header>

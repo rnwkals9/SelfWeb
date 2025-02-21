@@ -1,3 +1,4 @@
+
 /* 기본 스타일 설정 */
 body {
     font-family: 'Arial', sans-serif;
@@ -49,12 +50,8 @@ a:hover {
 /* 메인 콘텐츠 스타일 */
 main {
     background-image: url('images/pizzabackground.jpg'); /* 배경 이미지 */
-    background-size: contain;  /* 이미지가 넘치지 않도록 */
-    background-position: center; /* 이미지 위치 중앙 */
-    background-repeat: no-repeat; /* 이미지 반복 방지 */
-    width: 100%; /* 전체 너비를 차지 */
-    height: 500px; /* 배경 이미지 높이 설정 */
-    position: relative;
+    
+    background-size: cover;
 }
 
 
@@ -103,3 +100,87 @@ footer {
     bottom: 0;
     font-size: 16px;
 }
+/* 메뉴 페이지 스타일 */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #555;
+}
+/* 주문 페이지 스타일 */
+.order-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.order-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s, transform 0.2s;
+    text-align: center;
+}
+
+.order-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.order-item input[type="radio"] {
+    display: none; /* 기본 라디오 버튼 숨김 */
+}
+
+.order-item span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 라디오 버튼 선택 시 스타일 변경 */
+.order-item input[type="radio"]:checked + img {
+    border: 3px solid #e74c3c;
+    transform: scale(1.1);
+}
+
+
+
+/* 주문 버튼 스타일 */
+button {
+    display: block;
+    margin: 20px auto;
+}
+
