@@ -3,6 +3,7 @@
 
 <%
     // 회원가입 폼에서 데이터 가져오기
+    request.setCharacterEncoding("UTF-8");  // 인코딩 설정
     String id = request.getParameter("id");
     String pass = request.getParameter("password");
     String uname = request.getParameter("uname");
@@ -17,7 +18,8 @@
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         // 데이터베이스 연결
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spring5fs", "root", "1234");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spring5fs?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul"
+, "root", "1234");
 
         // SQL 쿼리 준비 (회원 정보 삽입)
         String sql = "INSERT INTO pizza (id, pass, uname, sex, phonenum) VALUES (?, ?, ?, ?, ?)";

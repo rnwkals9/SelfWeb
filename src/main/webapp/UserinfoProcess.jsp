@@ -2,12 +2,14 @@
 <%@ page import="java.sql.*" %>
 
 <%
+	request.setCharacterEncoding("UTF-8");
     String id = (String) session.getAttribute("id");
 
     if (id == null) {
         response.sendRedirect("login.jsp");
         return;
     }
+    
 
     Connection conn = null;
     PreparedStatement pstmt = null;
@@ -20,7 +22,7 @@
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spring5fs", "root", "1234");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spring5fs?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul", "root", "1234");
 
         String sql = "SELECT uname, sex, phonenum FROM pizza WHERE id = ?";
         pstmt = conn.prepareStatement(sql);

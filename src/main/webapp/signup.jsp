@@ -6,51 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <link rel="stylesheet" href="mainpage.css">
+    <style>
+        .signup-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #FF9800;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn-signup {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #FF9800;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-signup:hover {
+            background-color: #e68900;
+        }
+
+        .login-link {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #FF9800;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>회원가입</h1>
-            <nav>
-                <ul>
-                    <li><a href="signup.jsp">회원가입</a></li>
-                    <li><a href="login.jsp">로그인</a></li>
-                    <li><a href="menu.jsp">메뉴보기</a></li>
-                    <li><a href="order.jsp">주문하기</a></li>
-                    <li><a href="Userinfo.jsp">내 정보</a></li>
-                </ul>
-            </nav>
-        </header>
+        <%@ include file="header.jsp" %> <!-- 공통 헤더 포함 -->
 
-        <main>
-            <h2>회원가입 폼</h2>
+        <div class="signup-container">
+            <h2>회원가입</h2>
             <form action="signupProcess.jsp" method="post">
-                <label for="username">아이디:</label>
-                <input type="text" id="username" name="id" required><br><br>
+                <div class="input-group">
+                    <label for="username">아이디</label>
+                    <input type="text" id="username" name="id" required>
+                </div>
 
-                <label for="password">비밀번호:</label>
-                <input type="password" id="password" name="password" required><br><br>
+                <div class="input-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
 
-                <label for="name">이름:</label>
-                <input type="text" id="name" name="uname" required><br><br>
+                <div class="input-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="uname" required>
+                </div>
 
-                <label for="sex">성별:</label>
-                <select id="sex" name="sex" required>
-                    <option value="">성별 선택</option>
-                    <option value="M">남자</option>
-                    <option value="F">여자</option>
-                </select><br><br>
+                <div class="input-group">
+                    <label for="sex">성별</label>
+                    <select id="sex" name="sex" required>
+                        <option value="">성별 선택</option>
+                        <option value="M">남자</option>
+                        <option value="F">여자</option>
+                    </select>
+                </div>
 
-                <label for="phonenum">전화번호:</label>
-                <input type="tel" id="phonenum" name="phonenum" required placeholder="010-1234-5678"><br><br>
+                <div class="input-group">
+                    <label for="phonenum">전화번호</label>
+                    <input type="tel" id="phonenum" name="phonenum" required placeholder="010-1234-5678">
+                </div>
 
-                <button type="submit">가입하기</button>
+                <button type="submit" class="btn-signup">가입하기</button>
             </form>
-        </main>
+
+            <p class="login-link">이미 계정이 있으신가요? <a href="login.jsp">로그인</a></p>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 피자집. 모든 권리 보유.</p>
-    </footer>
+    <%@ include file="footer.jsp" %> <!-- 공통 푸터 포함 -->
 </body>
 </html>
